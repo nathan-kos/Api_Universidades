@@ -7,7 +7,9 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToMany;
+import jakarta.persistence.ManyToOne;
 
 @Entity(name = "campus")
 public class Campus {
@@ -24,6 +26,10 @@ public class Campus {
 
     @ManyToMany
     private List<Curso> curso;
+
+    @ManyToOne
+    @JoinColumn(nullable = false)
+    private Universidade universidade;
 
     public int getId() {
         return id;
