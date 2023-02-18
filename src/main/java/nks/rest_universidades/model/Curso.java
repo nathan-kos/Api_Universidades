@@ -10,12 +10,11 @@ import jakarta.persistence.Id;
 import jakarta.persistence.ManyToMany;
 
 
-@Entity(name = "cursos")
+@Entity(name = "curso")
 public class Curso {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_cursos")
     private int id;
 
     @Column(name = "nome")
