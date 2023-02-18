@@ -10,14 +10,14 @@ import org.springframework.web.bind.annotation.RestController;
 import nks.rest_universidades.model.Estados;
 import nks.rest_universidades.model.Universidade;
 //import nks.rest_universidades.model.Universidade;
-import nks.rest_universidades.repository.EstadosRespository;
+import nks.rest_universidades.repository.EstadosRepository;
 import nks.rest_universidades.repository.UniversidadeRepository;
 
 @RestController
 public class EstadosController {
     
     @Autowired
-    private EstadosRespository eRepository;
+    private EstadosRepository eRepository;
     @Autowired
     private UniversidadeRepository uRepository;
 
@@ -30,5 +30,5 @@ public class EstadosController {
     public List<Universidade> ConsultarUniversidadesPorEstado(@PathVariable String sigla){
         return uRepository.findUniversidadesByEstado(sigla);
     }
-    
+
 }

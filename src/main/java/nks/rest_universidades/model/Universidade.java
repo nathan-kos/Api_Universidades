@@ -8,12 +8,14 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.ManyToMany;
+import jakarta.persistence.OneToMany;
 
 @Entity(name = "universidades")
 public class Universidade {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     private int id;
 
     @Column(name = "nome", nullable = false)
@@ -27,6 +29,9 @@ public class Universidade {
 
     @ManyToMany(mappedBy = "universidade")
     private List<Estados> estados;
+
+    @OneToMany(mappedBy = "universidade")
+    private List<Campus> campus;
 
     public int getId() {
         return id;

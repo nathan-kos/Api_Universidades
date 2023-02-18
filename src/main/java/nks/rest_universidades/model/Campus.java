@@ -16,6 +16,7 @@ public class Campus {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    //@Column(name = "id_campus")
     private int id;
 
     @Column(name = "cidade", nullable = false)
@@ -24,11 +25,11 @@ public class Campus {
     @Column(name = "site", nullable = true)
     private String site;
 
-    @ManyToMany
+    @ManyToMany()
     private List<Curso> curso;
 
     @ManyToOne
-    @JoinColumn(nullable = false)
+    @JoinColumn(nullable = false, name = "campus_universidade_id")
     private Universidade universidade;
 
     public int getId() {
