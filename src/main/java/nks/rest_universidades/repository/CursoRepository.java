@@ -6,7 +6,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
 import nks.rest_universidades.DTO.CurCidDTO;
-import nks.rest_universidades.DTO.CurEstDTO;
 import nks.rest_universidades.DTO.CurUniDTO;
 import nks.rest_universidades.model.Curso;
 
@@ -19,7 +18,7 @@ public interface CursoRepository extends JpaRepository<Curso, Integer> {
     public List<CurCidDTO> CursoPorCidade(String cidade);
 
     @Query(value = "select curso.nome as curso, universidades.nome as universidade from curso join campus_curso on campus_curso.curso_id = curso.id join campus on campus.id = campus_curso.campus_id join universidades on campus.campus_universidade_id = universidades.id join estados_universidades on universidades.id = estados_universidades.universidade_id join estados on estados.id = estados_universidades.estados_id where estados.sigla = ?1", nativeQuery = true)
-    public List<CurEstDTO> cursoPorEstado(String sigla);
+    public List<CurUniDTO> cursoPorEstado(String sigla);
 
 
 }

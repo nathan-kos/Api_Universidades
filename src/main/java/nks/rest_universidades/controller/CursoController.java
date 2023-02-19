@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 import nks.rest_universidades.DTO.CurCidDTO;
-import nks.rest_universidades.DTO.CurEstDTO;
 import nks.rest_universidades.DTO.CurUniDTO;
 import nks.rest_universidades.model.Curso;
 import nks.rest_universidades.repository.CursoRepository;
@@ -35,7 +34,7 @@ public class CursoController {
     }
 
     @GetMapping(path = "/universidades/curso/estado/{sigla}")
-    public List<CurEstDTO> cursoPorEstado(@PathVariable("sigla") String sigla){
+    public List<CurUniDTO> cursoPorEstado(@PathVariable("sigla") String sigla){
         return repository.cursoPorEstado(sigla);
     }
 
