@@ -1,6 +1,6 @@
 # API Universidades
 
-Api rest simples com o intuito de consultas de cursos e campus de universidades publicas brasileiras
+Api rest simples com o intuito de consultas de cursos e campus de universidades publicas brasileiras.
 
 ## Tecnologias
 <div style="display:inline-block;">
@@ -61,7 +61,7 @@ Api rest simples com o intuito de consultas de cursos e campus de universidades 
 ![App Screenshot](./img/listar_curso.png)
 
 ### Lista de curso por universidade
-- Retorna uma lista de todos os cursos por universidade
+- Retorna uma lista de todos os cursos por universidade.
 ```bash
   GET /universidades/curso/universidade/{sigla}
 ```
@@ -72,7 +72,7 @@ Api rest simples com o intuito de consultas de cursos e campus de universidades 
 ![App Screenshot](./img/curso_universidade.png)
 
 ### Lista de curso por campus
-- Retorna uma lista de todos os curso por campus da universidade desejada
+- Retorna uma lista de todos os curso por campus da universidade desejada.
 ```bash
   GET /universidades/curso/campus/{cidade}
 ```
@@ -83,7 +83,7 @@ Api rest simples com o intuito de consultas de cursos e campus de universidades 
 ![App Screenshot](./img/curso_campus.png)
 
 ### Lista de curso por estado
-- Retorna uma lista de todos os cursos disponiveis no estado desejado
+- Retorna uma lista de todos os cursos disponiveis no estado desejado.
 ```bash
   GET /universidades/curso/estado/{sigla}
 ```
