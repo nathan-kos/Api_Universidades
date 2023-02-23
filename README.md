@@ -60,7 +60,7 @@ Api rest simples com o intuito de consultas de cursos e campus de universidades 
 ```
 ![App Screenshot](./img/listar_curso.png)
 
-### lista de curso por universidade
+### Lista de curso por universidade
 - Retorna uma lista de todos os cursos por universidade
 ```bash
   GET /universidades/curso/universidade/{sigla}
@@ -71,7 +71,7 @@ Api rest simples com o intuito de consultas de cursos e campus de universidades 
 
 ![App Screenshot](./img/curso_universidade.png)
 
-### lista de curso por campus
+### Lista de curso por campus
 - Retorna uma lista de todos os curso por campus da universidade desejada
 ```bash
   GET /universidades/curso/campus/{cidade}
@@ -82,7 +82,7 @@ Api rest simples com o intuito de consultas de cursos e campus de universidades 
 
 ![App Screenshot](./img/curso_campus.png)
 
-### lista de curso por estado
+### Lista de curso por estado
 - Retorna uma lista de todos os cursos disponiveis no estado desejado
 ```bash
   GET /universidades/curso/estado/{sigla}
@@ -93,16 +93,16 @@ Api rest simples com o intuito de consultas de cursos e campus de universidades 
 
 ![App Screenshot](./img/curso_estado.png)
 
-### lista de campus
-- Retorna uma lista de todos os campus disponiveis
+### Lista de campus
+- Retorna uma lista de todos os campus disponiveis.
 ```bash
   GET /universidades/campus/listar
 ```
 
 ![App Screenshot](./img/campus_listar.png)
 
-### lista de campus por universidade
-- Retorna uma lista de todos os campus da universidade desejada
+### Lista de campus por universidade
+- Retorna uma lista de todos os campus da universidade desejada.
 ```bash
   GET /universidades/campus/universidade/{sigla}
 ```
@@ -112,16 +112,16 @@ Api rest simples com o intuito de consultas de cursos e campus de universidades 
 
 ![App Screenshot](./img/campus_universidade.png)
 
-### lista de estado
-- Retorna uma lista de todos os estados
+### Lista de estado
+- Retorna uma lista de todos os estados.
 ```bash
   GET /universidades/estado/listar
 ```
 ![App Screenshot](./img/estados_listar.png)
 
 
-### lista de estados por curso
-- Retorna uma lista de todos os estados que oferecem o curso desejado
+### Lista de estados por curso
+- Retorna uma lista de todos os estados que oferecem o curso desejado.
 ```bash
   GET /universidades/estado/curso/{curso}
 ```
